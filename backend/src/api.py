@@ -32,7 +32,6 @@ def get_drinks():
     try:
         drinks = Drink.query.all()
         formatted_drinks = [drink.short() for drink in drinks]
-        print(formatted_drinks)
         return jsonify({
             'success': True,
             'drinks': formatted_drinks
